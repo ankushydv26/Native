@@ -19,6 +19,10 @@ const App = () => {
     
   }
 
+  const removeGoal = (goalId) =>{
+    return setCourseGoals(currentGoal => currentGoal.filter((goal) => goal.id != goalId))
+  }
+
   return (
     <View style={styles.container}>
        <View style={styles.inputContainer}>
@@ -31,7 +35,9 @@ const App = () => {
             keyExtractor={(item, index) => item.id}
             data={courseGoals}
             renderItem={ itemData =>(
-              <GoalItem 
+              <GoalItem
+               id={itemData.item.id}
+               onDelete={removeGoal} 
                title={itemData.item.value}
               />
           )}

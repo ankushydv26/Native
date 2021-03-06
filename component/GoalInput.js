@@ -18,6 +18,7 @@ const GoalInput = ({onAddGoal}) => {
           value={enteredGoal}
         />
         <Button title="ADD" onPress={() => onAddGoal(enteredGoal)}  />
+        {/* alternative on press bind method and above method is called anonymous arrow function */}
         {/* onPress={props.onAddGoal.bind(this, enteredGoal)} */}
       </View>
     // </Modal>
