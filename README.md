@@ -1,3 +1,3 @@
-# Native
+# React Native  Simple todo  App
 
-### issue  -- title props is undefined
+#By Using Expo Cli
